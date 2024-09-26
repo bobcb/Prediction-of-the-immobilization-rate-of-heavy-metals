@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 import joblib
 import xgboost as xgb
 import numpy as np
@@ -5,7 +11,6 @@ import streamlit as st
 
 import streamlit as st
 
-st.image('JLU.png')
 
 
 st.header('ML prediction for heavy metal adsorption capacity of bentonite')
@@ -40,3 +45,4 @@ if st.button('Predict', type='primary'):
     input_data_scaled = ss.transform(input_data)
     prediction = model.predict(input_data_scaled)
     st.success(f'Predicted heavy metal adsorption capacity: {prediction[0]:.2f} mg/g', icon="✅")
+
